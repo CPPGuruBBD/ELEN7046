@@ -609,10 +609,10 @@ page \thepage \space undefined}}%
 
 \def\subsubsection{\@startsection
    {subsubsection}%                   % name
-   {3}%                               % level
+   {2}%                               % level
    {\z@}%                             % indent
-   {0.75\baselineskip}%               % beforeskip
-   {-1em}%                            % afterskip
+   {0.5ex}%                  % beforeskip
+   {0.2ex}%                % afterskip
    {\normalfont\normalsize\textsl}}% % style
 
 \def\refname{REFERENCES}

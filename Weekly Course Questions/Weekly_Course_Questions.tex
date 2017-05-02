@@ -3,7 +3,7 @@
 %  
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[10pt, onecolumn]{witseiepaper}
+\documentclass[12pt, onecolumn]{witseiepaper}
 
 
 \usepackage{KJN}
@@ -13,11 +13,14 @@
 \usepackage{pdfpages}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{changepage}   % for the adjustwidth environment
 
 \definecolor{codegreen}{rgb}{0, 0.6, 0}
 \definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
 \definecolor{codepurple}{rgb}{0.58, 0, 0.82}
 \definecolor{backcolour}{rgb}{0.95, 0.95, 0.92}
+
+\newenvironment{myTab}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
 
 \graphicspath{{Images/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,8 +30,8 @@
 /Author ()
 /CreationDate (D:201604201500)
 /ModDate (D:201604201500)
-/Subject (ELEN7045 - )
-/Keywords ()
+/Subject (ELEN7046 - Software Technologies and Techniques)
+/Keywords (Software License, GPL, )
 }
 \fi
 \pagestyle{plain}
@@ -54,10 +57,17 @@
 		
 		% Minor heading such as course title
 		\HRule \\[0.4cm]
-		{ \huge \bfseries Question 1 : Software licenses general classifications }\\[0.25cm]
+		{ \huge \bfseries Weekly Course Questions }\\[0.25cm]
 		
 		% Title of your document
-		\HRule \\[1.25cm]
+		\HRule \\[2.25cm]
+		
+		\begin{figure}[H]
+			\center{\includegraphics[width=.25\linewidth]{WITSimage}} 
+		\end{figure}
+		
+		{\large \today}\\[1.25cm]
+		
 		\begin{minipage}
 			{0.4
 				\textwidth} 
@@ -82,19 +92,12 @@
 				\center\large{\textit{\\This is a declaration that the following student authored this report.}} \\
 			\end{flushright}
 		\end{minipage}\\[2cm]
-		
-	%	\begin{figure}[H]
-	%		\center{\includegraphics[width=.25\linewidth]{WITSimage}} 
-	%	\end{figure}
-				
-		{\large \today}\\[1.25cm]
-				
-					
-		 \begin{minipage}
+							
+		\begin{minipage}
 		 	{1	\textwidth} 
 		 	\begin{flushleft}
 		 	
-		 	\large \emph{\textbf{Abstract:}}\\
+		 	%\large \emph{\textbf{Abstract:}}\\
 		  			 			 	
 		  	\end{flushleft}
 		 \end{minipage}
@@ -104,37 +107,214 @@
 	
 
 \tableofcontents
-%\newpage
+\newpage
 
 %\listoffigures
 %\listoftables
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+\section{Question 1: \newline Software Licenses}
+It is proposed that three major general classification of software licenses are:\cite{question_1}
+\begin{itemize}
+	\item Open-source / free.
+	\item Proprietary / commercial.
+	\item Mixed (free or discounted for non-commercial/educational use, pay for commercial use).
+\end{itemize}
 
-intro blah blah \cite{Java}
+Do you agree with the proposed classification?  You will most likely want to suggest alternative classifications.  Briefly discuss the key features os each classification.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{License Classifications}
-
-\section{Open Source Licenses}
-
-%\subsection{LGPL}
-
-\section{Proprietary Licenses}
-
-\section{Mixed Licenses}
-
-\section{License Comparison}
-
-\section{Conclusion}
-
+For each of your general license classifications, provide a specific example (eg. GNU GPL).
+Critical compare and contrast each of your specific license examples.
 
 \newpage
 
+\subsection{Introduction}
+The definition of Software License as defined by Business Dictionary \cite{bussdict}
+
+\begin{quote}
+	\textit{Permission to use a software on non-exclusive basis, and subject to the listed conditions. A software license does not automatically transfer the ownership of the software to the buyer and its purchase price, in effect, is a one time rental fee.}
+\end{quote}
+
+Software licensing is a confusing subject, due to the various type of licenses and license contracts, with vendors using different terms to describe their licenses.  A License also grants specific permissions for others to use that work.  It is also an alternative way of releasing developed work into the public domain without relinquishing any copyright or loosing crediting the original author or contributors.  Software licensing is also the legal rights pertaining to the authorized use of digital media.  It also provides end users with rights to one or more copies without violating copyright.
+
+\subsection{License Classifications}
+
+Licensing software is a method of ensuring how it is released into the public domain and how it can be incorporated in other applications, by use of code or libraries.  These can form two distinct categories, open-source which is generally perceived as free software and proprietary which are seen as paid for software.  
+
+A combination of licenses could also be incorporated in a new derivative product and resulting in a possible mixed license.
+
+
+\begin{itemize}
+	\item Open-source (allow software to be used, modified, and shared, without restriction)
+	\item Proprietary (users do not own the software itself)
+	\item Mixed (free or discounted for non-commercial/educational use, pay for commercial use).
+\end{itemize}
+
+
+\subsection{Open Source Licenses}
+
+Open source licenses enable developers and designer to release their work into public domain, without giving away any of the rights.  It allows the retention of the original copyright or patent if exist.  An alternate way of releasing work to the public domain would by granting permission on a case-by-case basis, with more time being spent on dealing with individual permissions than developing or designing.  Open source licensing enable others to contribute to projects without the need of seeking special permission.  It provides the creator the needed protection and required credit for the contribution.  Various types open-source licensing exist with GNU General Public License (GPL) being the most popular.
+
+\subsubsection{GNU General Public License (GPL)}
+
+Probably one of the most commonly used licenses for open-source projects.  The latest is version 3 (GPL-3.0) with GPL-1.0 generally seen as deprecated and only used by the Perl community. \cite{GPL} 
+
+The GPL grants and guarantees a big variety of rights to developers that want to distribute or work on open-source projects. Basically, it allows users to legally copy, distribute and modify software.  This allows the user the following:
+
+\textbullet \space Copy the software.
+
+Allows the software to be copied to own servers, client server with no limit to the number of copies.  Pretty much allow for the copy of software to any ware
+
+\textbullet \space Distribute the software however you want.
+
+Enabling user to download from a website.  Distribute the software via external Universal Serial Bus(USB) storage media.  Allowing source code being distribute via printed media.
+
+\textbullet \space Charge a fee to distribute the software.
+
+This allows one to charge for the download of the software, with the explicate instruction to provide a copy of the GNU GPL license.
+
+\textbullet \space Make whatever modifications to the software you want.
+
+This allows for the modification of software either by adding or removing functionality, even using portions of code in other project, as-long-as that project also fall under the same GPL license.
+
+A very important differentiation needs to be made between source and binary distributions with regard to issues and restriction with some licenses when used with applications released under “each other”.  Using GPL as a licensing type, certain information need to be included in the software’s code, along with a copy of the license.
+
+\subsubsection{GNU Lessor General Public License (LGPL)}
+
+
+The Lesser General Public Licence (LGPL) grants fewer rights to a work than the standard GPL. \cite{LGPL}  It is generally more appropriate for linking libraries to other non-GPL and non-open-source software.  The reason for this is that using GPL code or parts of the code in other projects should be release under the same GPL license.  Developers cannot use GPL-Licensed code if propitiatory or paid for software.  LGPL negates this by not requiring other projects with parts of the code to be similarly licensed.
+
+\subsubsection{BSD License}
+
+
+Originally developed at the University of California at Berkeley (UCB) \cite{BSD} and first used in 1980 for the \textit{Berkeley Source Distribution}(BSD), also known as BSD UNIX
+
+The BSD License only has a few restriction regarding redistribution of software with or without modifications:
+
+\begin{itemize}
+	\item must include original copyright notice.
+	\item a list of simple restrictions.
+	\item a disclaimer of liabilities.
+\end{itemize}
+
+The basics of the restrictions is that one should not claim to have written the software if that is not the case and one should not sue the developer if the software do not function as expected.  
+
+BSD-style licenses with its extremely minimal restrictions, therefore software that is released under this license can be freely modified and used proprietary software as long as the source code is kept secret.  BSD-style licenses can also be 
+
+%The New BSD License (“3-clause license”) allows unlimited redistribution for any purpose as long as its copyright notices and the license’s disclaimers of warranty are maintained. The license also contains a clause restricting use of the names of contributors for endorsement of a derived work without specific permission. The primary difference between the New BSD License and the Simplified BSD license is that the latter omits the non-endorsement clause.
+
+\subsubsection{MIT License}
+
+The MIT License is the shortest and probably broadest of all the popular open-source licenses.\cite{MIT} It has very loose terms and generally more permissive than most other licenses. The basic provision of the license is as follows:
+
+\begin{quotation}
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+\end{quotation}
+
+What this means is that:
+
+
+\textbullet \space You can use, copy and modify the software however you want. No one can prevent you from using it on any project, from copying it however many times you want and in whatever format you like, or from changing it however you want.
+
+\textbullet \space You can give the software away for free or sell it. You have no restrictions on how to distribute it.
+
+\textbullet \space The only restriction is that it be accompanied by the license agreement.
+The MIT License is the least restrictive license out there. It basically says that anyone can do whatever they want with the licensed material, as long as it’s accompanied by the license.
+
+\subsubsection{Apache License}
+The Apache License and specifically Version 2.0, grants a number of rights.\cite{Apache} These can be applied to both copyrights and patents. Though some licenses can be applied only to copyrights and not patents, this flexibility would be an obvious factor in a patent developer’s choice of license.
+
+Here are some more details on what the Apache License allows:
+
+\textbullet \space Rights are perpetual.
+Once they’ve been granted, you can continue to use them forever.
+
+\textbullet	\space Rights are worldwide.
+If the rights are granted in one country, then they’re granted in all countries. For example, if you’re in the US and the original license was granted in India, you’re not prevented from using the code under the license.
+
+\textbullet \space Rights are granted for no fee or royalty.
+
+Not only will you not be charged any kind of up-front usage fee, but you will not be charged fees on a per-usage or any other basis either.
+
+\textbullet \space Rights are non-exclusive.
+You can use the licensed work, and so can anyone else.
+
+\textbullet \space Rights are irrevocable.
+No one can take these rights away once they’re granted. Meaning that you do not need to worry that sometime later, when you’ve created some derivative of the licensed code, someone will swoop in and say, “Sorry, you can’t use this code anymore.”
+
+Redistributing code also has special requirements, mostly pertaining to giving proper credit to those who have worked on the code and to maintaining the same license.
+
+\subsection{Proprietary Licenses}
+
+Proprietary license is when the publisher of the software grants the user the use of one or more copies of the software, though the ownership remains with the publisher.  The acceptance of the license agreement permits the use of the software.  
+
+Various forms of licenses scope exist with Proprietary license:
+
+\textbf{End User License Agreement (EULA)}
+
+
+Also known as "clickwraps" or "shrinkwraps", EULAS state the term under which a software application my be used by the end-user.  This is in the form of an Agreement or contract between the software publisher or vendor and the organizations and all users utilizing the software with in the organization.
+
+\textbf{Workstation licenses}
+
+
+This License permits a single installation of the application and is usually linked to single computer, the user is also allowed a single backup copy of the software only if that copy is restored to the original licensed machine.
+  
+\textbf{Concurrent use license}
+
+
+These licenses permits the installation of software on multiple workstations as long as the number of computers using the software at the same time do not exceed the number of licenses which was purchased.
+A license manager is usually responsible for managing the concurrent number of licenses being used in a organization. 
+
+%\textbf{Site licenses}
+%\newline A site license permits the use of software on any computer at a specified site.  Unlimited site licenses allow the installation of software on any number of computers as long as those computers are located at the specified site.  Some site licenses permit the installation on computers owned by a particular entity (such as a university) regardless of the physical location.  Some vendors refer to their licenses as site licenses but restrict the number of computers on which the software may be installed.  The only way to know for sure is to read the license specifics.
+
+\textbf{Perpetual licenses}
+
+The user of these type of license are permitted to use the software indefinite without requiring a recurring license fee.  Individuals that mostly purchase software for home use would make use of perpetual licenses.
+
+\textbf{Non-perpetual licenses}
+
+These are "lease" based licenses which the software is licensed to be used for a specified period of time, usually annually or bi-annually. the software should be removed from the installed computer if they cease paying the license fee.
+
+
+\textbf{License with Maintenance}
+
+
+Some license agreements allow the purchase of a "maintenance" or "software assurance" with the license fee, which entitles the user to receive new versions of the software for one to two years until the maintenance agreement expires.
+
+\subsection{Mixed Licenses}
+
+Developed software can be release under a mixed licenses option open-source and a commercial license.  Open-source allows developer and interested parties to use the code, to allow them to understand what is in it and potentially be able to modify it if they want. As the original developer you are not obliged to provide any support.  You can though under a commercial contract provide then with support.  This will allow that under this contract additional code can also be provided at a fee.
+
+Another option is to use multiple open-source licenses -- e.g. MIT and GPL
+In these cases the user of the code can then chose which license they would like to accept, generally they will chose the more permissive license or which is more compatible with the other code's terms. 
+
+\subsection{License Comparison}
+
+Fewer applications are released under the BSD-style licenses,  this is disproportionately important because the widespread use of BSD-licensed code in both free and proprietary operating systems.
+
+The biggest difference between the GPL and BSD licenses is that GPL is a copyleft license and BSD is not. Copyleft is the application of copyright law to permit the free creation of derivative works, though it requires that this new work be redistributed under the same terms as the original work.
+
+The use of open-source code allows companies a quicker time to market at a lower expense for there products, than having to develop the product with entirely original code.  For developer who want to develop commercial products from open-source code and want to keep their modifications and extensions secret can do this by creating a  derivative product using BSD-licensed software.
+
+
+%Interestingly, companies that initially develop closed source products based on BSD-licensed code tend to be more likely to eventually make their source code publicly available than are companies that develop products that do not incorporate code code.
+
+%One thing about both the GPL and the BSD-style licenses for which there is widespread agreement is that both have problems. Neither is perfect, and perhaps no license can be perfect. There is also considerable agreement that there are benefits both to software developers and to society as a whole from the choice provided by the existence of a variety of types of free software licenses, including the GPL and BSD-style licenses.
+
+\subsection{Conclusion}
+
+Each license or style of license has its own set of pros and cons.  It all boils down to the purpose or objectives of the code being used and the new product being developed.  The selection of a license or the use of licensed code or library needs to be looked at in context of the originations need and purpose of the application being developed.  
+
+One thing about all-styles of licenses for which there is widespread agreement is that all have problems. No single type, perhaps no license can be perfect. The understanding is that there is also considerable benefits both to software developers and society as a whole from the choice provided by the existence of various types of free software licenses.
+
+When selecting a license for a derivative work done the licensee need to research all options regarding licensing of code that was used and not originally developed as-well as how the new work will be released to the public domain.  Being it to open-source projects or commercial products as this will impact legal aspects of intellectual property and copyrights.
+
+\newpage
 \bibliographystyle{witseie}
 \bibliography{bibliography}
+
 \end{document}
